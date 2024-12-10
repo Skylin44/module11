@@ -5,7 +5,7 @@ import pprint
 def introspection_info(obj):
     info = {}
     info['type'] = type(obj)
-    info['attributes'] = dir(obj)
+    info['attributes'] = hasattr(obj, 'attributes')
     info['methods'] = inspect.getmembers(obj)
     info['module'] = inspect.getmodule(obj)
     return info
